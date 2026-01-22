@@ -138,8 +138,9 @@ h3 {
   text-align: center;
   margin: 0 10px;
   gap: 30px;
-  height: 350px;
+  overflow: hidden;
   width: 235px;
+  padding: 24px 0 24px;
   /* card  */
   border-radius: 20px;
   background-color: #fef2eb;
@@ -206,10 +207,11 @@ h3 {
   text-align: center;
   margin: 0 10px;
 
-  height: 400px;
+  overflow: hidden;
   width: 235px;
   /* card  */
   border-radius: 20px;
+  padding-bottom: 24px;
   background-color: #fef2eb;
   transition:
     transform 0.25s ease,
@@ -287,7 +289,15 @@ h3 {
 .pricing-card-popular .card-content:hover .popular-tag {
   box-shadow: 0 0 35px #ffc68d;
 }
-
+/* button animaiton  */
+.btn-primary {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+}
 /* footer  */
 footer {
   text-align: center;
@@ -316,4 +326,10 @@ footer {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* responsive  */
+.feature-card,
+.pricing-grid {
+  flex-wrap: wrap;
 }
