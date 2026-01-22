@@ -143,6 +143,23 @@ h3 {
   /* card  */
   border-radius: 20px;
   background-color: #fef2eb;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* feature card animation  */
+.feature-content:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 35px #ffc68d;
+}
+.feature-content:hover .logo {
+  transform: translateY(-6px) scale(1.25);
+  background-color: #ffc68d;
+}
+.feature-content:hover h3 {
+  color: #e3781d;
 }
 
 .feature-content p {
@@ -194,10 +211,14 @@ h3 {
   /* card  */
   border-radius: 20px;
   background-color: #fef2eb;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .card-content h3 {
   padding-top: 40px;
+  transition: transform 0.25s ease;
 }
 .card-content p {
 }
@@ -252,6 +273,19 @@ h3 {
   content: "\2713"; /* Unicode for checkmark */
   color: #df6b1a; /* Orange color */
   font-weight: bold;
+}
+
+/* pricing card animation  */
+.card-content:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 35px #e79c51;
+}
+.card-content:hover h3 {
+  color: #e3781d;
+  transform: translateZ(-5px) scale(1.5);
+}
+.pricing-card-popular .card-content:hover .popular-tag {
+  box-shadow: 0 0 35px #ffc68d;
 }
 
 /* footer  */
