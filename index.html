@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChaiVerse</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
   </head>
   <body>
+    <!-- loader -->
+    <div class="preloader">
+      <div class="spinner"></div>
+    </div>
+
     <!-- navbar -->
     <div class="nav-wrapper">
       <header class="navbar">
         <nav class="nav-container">
           <!-- logo and product name -->
-          <div class="logo">ChaiVerse</div>
+          <span class="img-logo">
+            <img src="assets/tea-logo.png" alt="" />
+
+            <span class="logo">ChaiVerse</span>
+          </span>
           <!-- nav-links -->
           <ul class="nav-links">
             <li><a href="#home" class="active">Home</a></li>
@@ -145,6 +155,7 @@
           <div class="pricing-card-popular">
             <div class="card-content">
               <span class="price-top-color-premium">
+                <span class="popular-tag">Most Popular</span>
                 <h3>Premium</h3>
                 <p>More options, more chai</p>
               </span>
@@ -194,14 +205,5 @@
         <p>&copy; 2026 ChaiVerse. Crafted with warmth.</p>
       </div>
     </footer>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
