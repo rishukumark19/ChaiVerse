@@ -63,6 +63,7 @@ h3,
   justify-content: space-between;
   box-sizing: border-box;
   align-items: center;
+  /* position: relative; */
 }
 .hero-content {
   min-width: 0;
@@ -70,8 +71,11 @@ h3,
 .hero-image {
   display: block;
   max-width: 100%;
-
-  /* height: auto; */
+  /* width: 50%; */
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
 }
 
 .hero-text {
@@ -328,8 +332,72 @@ footer {
   }
 }
 
-/* responsive  */
-.feature-card,
-.pricing-grid {
-  flex-wrap: wrap;
+/* responsive feature section for phone */
+@media screen and (max-width: 768px) {
+  /* nav bar  */
+  .nav-container {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+
+  /* hero section text  */
+  .hero-text {
+    position: static;
+    text-align: center;
+  }
+
+  /* hero section image  */
+  .hero-image {
+    display: none;
+  }
+  /* feature section heading and sub heading text  */
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .section-line {
+    width: 20%;
+  }
+  /* button  */
+  .btn-primary {
+    font-size: 1rem;
+    margin-bottom: 60px;
+  }
+
+  /* feature section card  */
+  .feature-card {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .feature-content {
+    width: 100%;
+  }
+
+  /* price section heading and sub heading text  */
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .section-line {
+    width: 20%;
+  }
+
+  /* price section cards  */
+  .pricing-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .card-content {
+    width: 100%;
+  }
 }
