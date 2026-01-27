@@ -58,6 +58,22 @@ h3,
   font-size: 1.5rem;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fdf1e0;
+}
+
 .hero {
   display: flex;
   justify-content: space-between;
@@ -333,27 +349,82 @@ footer {
 }
 
 /* responsive feature section for phone */
-@media screen and (max-width: 768px) {
-  /* nav bar  */
-  .nav-container {
-    display: none;
+@media screen and (max-width: 600px) {
+  /* nav bar */
+  .nav-wrapper {
+    padding-top: 0;
   }
   .navbar {
-    display: none;
+    display: block; /* Ensure visible */
+  }
+  .nav-container {
+    display: flex; /* Keep flex to align logo and burger */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .img-logo {
+      display: block; /* Ensure logo is visible */
+  }
+  .img-logo img {
+      width: 40px; /* Resize logo for mobile */
   }
   .logo {
-    display: none;
+    display: none; /* Hide text logo if desired, or keep it. User had display:none */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform:  rotate(-45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform:  rotate(45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #5c2917;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 2.5rem 0;
   }
 
   /* hero section text  */
+  .hero {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
   .hero-text {
     position: static;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   /* hero section image  */
   .hero-image {
-    display: none;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
   }
   /* feature section heading and sub heading text  */
   .section-header h2 {
@@ -368,7 +439,7 @@ footer {
   /* button  */
   .btn-primary {
     font-size: 1rem;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; Removed large margin as we have spacing elsewhere */
   }
 
   /* feature section card  */
@@ -378,6 +449,9 @@ footer {
   }
   .feature-content {
     width: 100%;
+  }
+  .section-subtitle {
+    text-align: center;
   }
 
   /* price section heading and sub heading text  */
