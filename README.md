@@ -49,3 +49,4 @@ A modern, responsive product landing page for a premium chai brand, built with H
 ## 👤 Author
 
 Built as part of a web development assignment.
+Build with Curiosity.
